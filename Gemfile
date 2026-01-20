@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.3"
 gem "jekyll-feed", "~> 0.15"
 gem "jekyll-sitemap", "~> 1.4"
+gem "jekyll-paginate", "~> 1.1"
 
 # Windows 和 JRuby 不支持，可以注释掉
 # gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]

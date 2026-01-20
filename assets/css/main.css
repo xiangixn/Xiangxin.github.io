@@ -13,7 +13,7 @@ body {
 }
 
 .background-image {
-    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=80');
+    background-image: url('/assets/img/24b31bab4e4d0a32fae1966a371dcfebfa0de45132759-Q4n2GW_fw1200.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,4 +124,56 @@ body {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     font-weight: 300;
+}
+
+/* 导航栏样式 */
+nav {
+    transition: all 0.3s ease;
+}
+
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* 内容区域样式 */
+.prose {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.prose h1, .prose h2, .prose h3 {
+    color: #ffffff;
+}
+
+.prose a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+}
+
+.prose a:hover {
+    color: #ffffff;
+}
+
+/* 卡片悬停效果 */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }

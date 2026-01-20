@@ -1,0 +1,51 @@
+---
+layout: default
+title: 项目展示
+---
+
+<div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">项目展示</h1>
+        <div class="divider mx-auto"></div>
+        <p class="text-white text-opacity-80 mt-4">以下是我的一些项目作品</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for project in site.projects %}
+        <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-6 hover:bg-opacity-20 transition-all border border-white border-opacity-20">
+            <h3 class="text-xl font-semibold text-white mb-2">{{ project.title }}</h3>
+            <p class="text-white text-opacity-80 text-sm mb-4">{{ project.description | default: "项目描述待添加..." }}</p>
+            {% if project.tags %}
+            <div class="flex flex-wrap gap-2 mb-4">
+                {% for tag in project.tags %}
+                <span class="px-2 py-1 bg-white bg-opacity-20 text-white text-xs rounded">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if project.link %}
+            <a href="{{ project.link }}" target="_blank" class="text-white hover:text-gray-200 text-sm underline">
+                查看项目 →
+            </a>
+            {% endif %}
+        </div>
+        {% else %}
+        <div class="col-span-full bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-12 text-center">
+            <p class="text-white text-opacity-60">暂无项目，项目内容将在 _projects 目录中添加</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- 占位卡片示例 -->
+    <div class="mt-8 bg-white bg-opacity-5 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
+        <h3 class="text-lg font-semibold text-white mb-2">📝 如何添加项目？</h3>
+        <p class="text-white text-opacity-70 text-sm">
+            在 <code class="bg-black bg-opacity-30 px-2 py-1 rounded">_projects</code> 目录中创建 Markdown 文件，使用以下 front matter 格式：
+        </p>
+        <pre class="mt-4 bg-black bg-opacity-30 p-4 rounded text-xs text-white overflow-x-auto"><code>---
+title: 项目名称
+description: 项目描述
+tags: [标签1, 标签2]
+link: https://example.com
+---</code></pre>
+    </div>
+</div>

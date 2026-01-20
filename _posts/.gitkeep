@@ -1,0 +1,10 @@
+# 文章文件将放在此目录
+# 文件命名格式：YYYY-MM-DD-文章标题.md
+# 
+# 示例 front matter:
+# ---
+# layout: default
+# title: 文章标题
+# date: 2024-01-01
+# tags: [标签1, 标签2]
+# ---

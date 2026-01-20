@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: home
 title: Xin Xiang - 个人主页
 ---
 
-<div class="text-center space-y-8 max-w-3xl w-full" style="overflow: visible;">
+<div class="text-center space-y-8 max-w-3xl w-full">
     <!-- Name -->
     <h1 class="name-text text-6xl md:text-8xl lg:text-9xl animate-fade-in" style="overflow: visible; line-height: 1.1;">
         {{ site.author.name }}
@@ -22,6 +22,22 @@ title: Xin Xiang - 个人主页
         <a href="mailto:{{ site.author.email }}" 
            class="email-link text-lg md:text-xl lg:text-2xl">
             {{ site.author.email }}
+        </a>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="pt-8 animate-fade-in-delay-2 flex flex-wrap justify-center gap-4">
+        <a href="{{ '/about/' | relative_url }}" 
+           class="px-6 py-3 bg-white bg-opacity-10 hover:bg-opacity-20 text-white rounded-lg transition-all backdrop-blur-sm border border-white border-opacity-20">
+            关于我
+        </a>
+        <a href="{{ '/projects/' | relative_url }}" 
+           class="px-6 py-3 bg-white bg-opacity-10 hover:bg-opacity-20 text-white rounded-lg transition-all backdrop-blur-sm border border-white border-opacity-20">
+            项目展示
+        </a>
+        <a href="{{ '/blog/' | relative_url }}" 
+           class="px-6 py-3 bg-white bg-opacity-10 hover:bg-opacity-20 text-white rounded-lg transition-all backdrop-blur-sm border border-white border-opacity-20">
+            文章列表
         </a>
     </div>
 
