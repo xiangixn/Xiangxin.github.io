@@ -1,155 +1,34 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xin Xiang - 个人主页</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+---
+layout: default
+title: Xin Xiang - 个人主页
+---
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-            overflow-x: hidden;
-        }
+<div class="text-center space-y-8 max-w-3xl w-full">
+    <!-- Name -->
+    <h1 class="name-text text-6xl md:text-8xl lg:text-9xl animate-fade-in">
+        {{ site.author.name }}
+    </h1>
+    
+    <!-- Divider -->
+    <div class="divider animate-fade-in-delay"></div>
+    
+    <!-- Subtitle -->
+    <p class="subtitle-text text-sm md:text-base animate-fade-in-delay">
+        欢迎来到我的个人主页
+    </p>
 
-        .background-image {
-            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=80');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            position: relative;
-        }
-
-        .background-overlay {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
-            backdrop-filter: blur(1px);
-        }
-
-        .name-text {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
-            letter-spacing: 0.05em;
-        }
-
-        .subtitle-text {
-            color: rgba(255, 255, 255, 0.85);
-            font-weight: 300;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-
-        .email-link {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            font-weight: 400;
-            letter-spacing: 0.05em;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .email-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.8);
-            transition: width 0.3s ease;
-        }
-
-        .email-link:hover {
-            color: #ffffff;
-        }
-
-        .email-link:hover::after {
-            width: 100%;
-        }
-
-        .divider {
-            width: 60px;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.3);
-            margin: 0 auto;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 1.2s ease-out;
-        }
-
-        .animate-fade-in-delay {
-            animation: fadeIn 1.2s ease-out 0.3s both;
-        }
-
-        .animate-fade-in-delay-2 {
-            animation: fadeIn 1.2s ease-out 0.6s both;
-        }
-
-        .footer-text {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.75rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            font-weight: 300;
-        }
-    </style>
-</head>
-<body class="background-image">
-    <div class="background-overlay min-h-screen flex flex-col items-center justify-center p-6 md:p-8">
-        <div class="text-center space-y-8 max-w-3xl w-full">
-            <!-- Name -->
-            <h1 class="name-text text-6xl md:text-8xl lg:text-9xl animate-fade-in">
-                Xin Xiang
-            </h1>
-            
-            <!-- Divider -->
-            <div class="divider animate-fade-in-delay"></div>
-            
-            <!-- Subtitle -->
-            <p class="subtitle-text text-sm md:text-base animate-fade-in-delay">
-                欢迎来到我的个人主页
-            </p>
-
-            <!-- Email -->
-            <div class="pt-4 animate-fade-in-delay-2">
-                <a href="mailto:widebbie0923@mail.scut.edu.cn" 
-                   class="email-link text-lg md:text-xl lg:text-2xl">
-                    widebbie0923@mail.scut.edu.cn
-                </a>
-            </div>
-
-            <!-- Footer -->
-            <div class="pt-12 md:pt-16 animate-fade-in-delay-2">
-                <p class="footer-text">
-                    感谢访问
-                </p>
-            </div>
-        </div>
+    <!-- Email -->
+    <div class="pt-4 animate-fade-in-delay-2">
+        <a href="mailto:{{ site.author.email }}" 
+           class="email-link text-lg md:text-xl lg:text-2xl">
+            {{ site.author.email }}
+        </a>
     </div>
-</body>
-</html>
+
+    <!-- Footer -->
+    <div class="pt-12 md:pt-16 animate-fade-in-delay-2">
+        <p class="footer-text">
+            感谢访问
+        </p>
+    </div>
+</div>

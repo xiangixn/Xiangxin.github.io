@@ -1,0 +1,33 @@
+# Jekyll 配置文件
+title: Xin Xiang - 个人主页
+description: 欢迎来到我的个人主页
+email: widebbie0923@mail.scut.edu.cn
+lang: zh-CN
+
+# 基础设置
+url: "" # 如果部署到 GitHub Pages，会自动设置
+baseurl: "" # 如果部署到子目录，设置这里
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
+
+# 主题设置（可选）
+theme: minima
+
+# 自定义变量
+author:
+  name: Xin Xiang
+  email: widebbie0923@mail.scut.edu.cn
