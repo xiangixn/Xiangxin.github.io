@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Ma+Shan+Zheng&family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Ma+Shan+Zheng&family=Montserrat:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 * {
     margin: 0;
@@ -111,11 +111,12 @@ body {
 }
 
 .email-link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    font-weight: 300;
-    letter-spacing: 0.1em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
     position: relative;
     transition: all 0.3s ease;
 }
