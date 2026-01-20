@@ -9,6 +9,7 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .background-image {
@@ -28,12 +29,27 @@ body {
 .name-text {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    color: #ffffff;
     background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
     letter-spacing: 0.05em;
+    line-height: 1.2;
+    overflow: visible;
+    padding: 0.15em 0.1em;
+    display: block;
+    min-height: 1em;
+    position: relative;
+}
+
+/* 如果浏览器不支持 background-clip: text，使用备用样式 */
+@supports not (-webkit-background-clip: text) {
+    .name-text {
+        -webkit-text-fill-color: #ffffff;
+        color: #ffffff;
+    }
 }
 
 .subtitle-text {

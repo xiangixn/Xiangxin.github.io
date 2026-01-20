@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body class="background-image">
-    <div class="background-overlay min-h-screen flex flex-col items-center justify-center p-6 md:p-8">
-        {{ content }}
+    <div class="background-overlay min-h-screen flex flex-col items-center justify-center p-6 md:p-8" style="overflow: visible;">
+        <div style="overflow: visible; position: relative; z-index: 1;">
+            {{ content }}
+        </div>
     </div>
 </body>
 </html>
