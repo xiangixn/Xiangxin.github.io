@@ -45,7 +45,7 @@ body {
     text-shadow: 
         0 0 10px rgba(255, 255, 255, 0.5),
         0 0 20px rgba(255, 255, 255, 0.3),
-        0 0 30px rgba(173, 216, 230, 0.2), /* 淡蓝色光晕适配星空 */
+        0 0 30px rgba(173, 216, 230, 0.2),
         0 0 40px rgba(173, 216, 230, 0.1);
     letter-spacing: 0.1em;
     line-height: 1.2;
@@ -54,16 +54,30 @@ body {
     display: block;
     min-height: 1em;
     position: relative;
-    /* 添加呼吸发光动画 */
-    animation: glow-pulse 3s infinite ease-in-out;
+    /* 修复：将呼吸动画移到单独的属性中，避免被 animate-fade-in 类覆盖 */
+    /* 或者在 HTML 中移除 animate-fade-in，在这里统一处理 */
+}
+
+/* 专门为姓名设计的复合动画 */
+.name-animate {
+    animation: fadeIn 1.2s ease-out forwards, glow-pulse 4s infinite ease-in-out 1.2s;
 }
 
 @keyframes glow-pulse {
     0%, 100% {
-        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, 0.5),
+            0 0 20px rgba(255, 255, 255, 0.3),
+            0 0 30px rgba(173, 216, 230, 0.2);
+        opacity: 0.9;
     }
     50% {
-        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 25px rgba(173, 216, 230, 0.4));
+        text-shadow: 
+            0 0 15px rgba(255, 255, 255, 0.8),
+            0 0 30px rgba(255, 255, 255, 0.6),
+            0 0 45px rgba(173, 216, 230, 0.5),
+            0 0 60px rgba(173, 216, 230, 0.3);
+        opacity: 1;
     }
 }
 
