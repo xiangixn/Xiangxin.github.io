@@ -4,7 +4,7 @@
 
 ## 📧 联系方式
 
-- **邮箱**: [your-email@example.com](mailto:your-email@example.com)
+- **邮箱**: [widebbie0923@mail.scut.edu.cn](mailto:widebbie0923@mail.scut.edu.cn)
 
 ## 🛠️ 技术栈
 
