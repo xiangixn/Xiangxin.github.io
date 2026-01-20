@@ -63,8 +63,8 @@ body {
     /* 核心思想：文字保持清晰，光晕(text-shadow)进行多重周期波动 */
     animation: 
         fadeIn 1.2s ease-out forwards, 
-        glow-ebb-flow 5s infinite ease-in-out 1.2s,
-        starlight-sparkle 3.1s infinite ease-in-out 1.2s;
+        glow-ebb-flow 2.5s infinite ease-in-out 1.2s,
+        starlight-sparkle 1.3s infinite ease-in-out 1.2s;
 }
 
 /* 主光晕呼吸：控制外围大光圈的扩张与收缩 */
@@ -90,7 +90,7 @@ body {
         filter: brightness(1);
     }
     15%, 55%, 90% {
-        filter: brightness(1.2); /* 仅微调亮度，保持字形清晰 */
+        filter: brightness(1.15); /* 仅微调亮度，保持字形清晰 */
     }
 }
 
