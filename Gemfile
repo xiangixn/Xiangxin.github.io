@@ -1,12 +1,10 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
-gem "jekyll-feed", "~> 0.15"
-gem "jekyll-sitemap", "~> 1.4"
-gem "jekyll-paginate", "~> 1.1"
+# GitHub Pages 兼容的 Jekyll 版本
+gem "github-pages", group: :jekyll_plugins
 
-# Windows 和 JRuby 不支持，可以注释掉
-# gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
-
-# 性能优化插件
-gem "jekyll-minifier", "~> 0.1.10"
+# 或者单独指定（如果不想使用 github-pages gem）
+# gem "jekyll", "~> 4.3"
+# gem "jekyll-feed", "~> 0.15"
+# gem "jekyll-sitemap", "~> 1.4"
+# gem "jekyll-paginate", "~> 1.1"

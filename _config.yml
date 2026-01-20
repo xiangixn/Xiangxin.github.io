@@ -5,12 +5,14 @@ email: widebbie0923@mail.scut.edu.cn
 lang: zh-CN
 
 # 基础设置
-url: "" # 如果部署到 GitHub Pages，会自动设置
-baseurl: "" # 如果部署到子目录，设置这里
+url: "https://xiangixn.github.io" # GitHub Pages 域名
+baseurl: "" # 根目录部署，保持为空
 
 # 构建设置
 markdown: kramdown
 highlighter: rouge
+
+# GitHub Pages 支持的插件
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -36,7 +38,7 @@ exclude:
   - .gitignore
 
 # 主题设置（可选）
-theme: minima
+# theme: minima  # 注释掉，使用自定义布局
 
 # 自定义变量
 author:
